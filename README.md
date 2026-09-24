@@ -1,7 +1,6 @@
 # Healthcare Data Fabric — Mini Backend
 
-A small backend project modeled on XCaliber Health's mission: **unifying fragmented
-healthcare data sources into one consistent platform.** It simulates three different
+A small backend project. It simulates three different
 "upstream EHR systems," each with its own messy field names, and runs an ingestion
 agent that normalizes their records into one canonical `patients` table exposed via
 a secured REST API.
