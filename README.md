@@ -33,7 +33,7 @@ healthcare-data-fabric/
 └── .env.example
 ```
 
-## Option A: Run with Docker (recommended, matches the JD's "cloud platforms" bonus skill)
+## Option A: Run with Docker 
 ```bash
 cp .env.example .env
 docker compose up --build
@@ -106,11 +106,7 @@ curl "http://localhost:4000/api/patients?search=diabetes&page=1&limit=10" \
 - `PATCH /api/patients/:id`
 - `DELETE /api/patients/:id` (admin role only)
 
-## Ideas to Extend (good talking points for an interview)
-- Swap the mock `fetchRecords()` calls in `services/ingestionAgent.js` for real
-  HTTP calls to partner APIs or a FHIR server.
-- Add a `node-cron` job to run ingestion automatically every N minutes.
-- Add request validation with `zod` or `joi`.
+
 - Add Jest + Supertest tests for the controllers.
 - Push ingestion logs to a queue (e.g. RabbitMQ/SQS) so ingestion becomes async
   and horizontally scalable — closer to a real "agentic data fabric."
